@@ -1,0 +1,21 @@
+<h1>Songs Index</h1>
+
+
+  <table>
+    <thead>
+      <tr>
+	<td>Title</td>
+	<td>Delete</td>
+      </tr>
+    </thead>
+    
+<% Song.all.each do |song| %>
+    <tbody>
+      <tr>
+	<td><%= song.title %></td>
+	<td><%= link_to "Delete", song, method: :delete, data: { confirm: "Really?" } %></td>
+      </tr>
+    </tbody>
+<% end %>
+    </tbody>
+  </table>
